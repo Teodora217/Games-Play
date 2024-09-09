@@ -21,7 +21,8 @@ export default function Login() {
                     <div className="brand-logo"></div>
                     <h1>Login</h1>
                     <label htmlFor="email">Email:</label>
-                    <input type="email" 
+                    <input 
+                    type="email" 
                     id="email" 
                     name={LoginFormKeys.Email} 
                     placeholder="Sokka@gmail.com" 
@@ -29,7 +30,8 @@ export default function Login() {
                     value={values[LoginFormKeys.Email]}/>
 
                     <label htmlFor="login-pass">Password:</label>
-                    <input type="password" 
+                    <input 
+                    type="password" 
                     id="login-password" 
                     name={LoginFormKeys.Password}
                     onChange={onChange}

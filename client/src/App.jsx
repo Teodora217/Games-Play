@@ -23,8 +23,13 @@ const [auth, setAuth] = useState({});
   navigate(Path.Home)
   };
 
+  const registerSubmitHandler = async (values) => {
+    console.log(values);
+  } 
+
   const values = {
     loginSubmitHandler,
+    registerSubmitHandler,
     username: auth.username,
     email: auth.email,
     isAuthenticated: !!auth.username, // convert to boolean value
@@ -38,7 +43,7 @@ const [auth, setAuth] = useState({});
       <Route path={Path.Home} element={<Home/>}/>
       <Route path="/games" element={<GameLists/>}/>
       <Route path="/create" element={<CreateGame/>}/>
-      <Route path="login" element={<Login/>}/>
+      <Route path="login" element={<Login />}/>
       <Route path="/register" element={<Register/>}/>
       <Route path="/games/:gameId" element={<GameDetails/>}/>
     </Routes>
