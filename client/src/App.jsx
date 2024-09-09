@@ -7,6 +7,7 @@ import Register from "./components/Register"
 import Login from "./components/Login"
 import GameDetails from "./components/GameDetails"
 import { useState } from "react"
+import AuthContext from "./contexts/authContext"
 
 
 
@@ -20,6 +21,7 @@ function App() {
   }
 
   return (
+    <AuthContext.Provider value={{loginSubmitHandler}}>
     <div id="box">
     <Header/>
     <Routes>
@@ -32,6 +34,7 @@ function App() {
     </Routes>
     <Home/>
     </div>
+    </AuthContext.Provider>
   )
 }
 
