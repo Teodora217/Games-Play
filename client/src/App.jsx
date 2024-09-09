@@ -23,15 +23,22 @@ const [auth, setAuth] = useState({});
   navigate(Path.Home)
   };
 
+  const values = {
+    loginSubmitHandler,
+    username: auth.username,
+    email: auth.email,
+    isAuthenticated: !!auth.username, // convert to boolean value
+  }
+
   return (
-    <AuthContext.Provider value={{loginSubmitHandler}}>
+    <AuthContext.Provider value={values}>
     <div id="box">
     <Header/>
     <Routes>
-      <Route path="/" element={<Home/>}/>
+      <Route path={Path.Home} element={<Home/>}/>
       <Route path="/games" element={<GameLists/>}/>
       <Route path="/create" element={<CreateGame/>}/>
-      <Route path="login" element={<Login loginSubmitHandler={loginSubmitHandler}/>}/>
+      <Route path="login" element={<Login/>}/>
       <Route path="/register" element={<Register/>}/>
       <Route path="/games/:gameId" element={<GameDetails/>}/>
     </Routes>
