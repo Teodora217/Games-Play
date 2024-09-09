@@ -9,7 +9,7 @@ import CreateGame from "./components/CreateGame"
 import Register from "./components/Register"
 import Login from "./components/Login"
 import GameDetails from "./components/GameDetails"
-import Path from "./paths"
+import Path from "../src/paths"
 
 
 
