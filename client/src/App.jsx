@@ -21,12 +21,12 @@ const [auth, setAuth] = useState(() => {
 
 });
 
-  const loginSubmitHandler = async (values )=> {
+  const loginSubmitHandler = async (values)=> {
   const result = await authService.login(values.email, values.password);
   setAuth(result)
   localStorage.setItem('accessToken', result.accessToken);
   navigate(Path.Home)
-  };
+  }
 
   const registerSubmitHandler = async (values) => {
     const result = await authService.register(values.email, values.password);
