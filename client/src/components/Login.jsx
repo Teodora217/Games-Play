@@ -31,7 +31,7 @@ export default function Login() {
                     <label htmlFor="login-pass">Password:</label>
                     <input type="password" 
                     id="login-password" 
-                    name={LoginFormKeys.password}
+                    name={LoginFormKeys.Password}
                     onChange={onChange}
                     value={values[LoginFormKeys.Password]}
                     />
