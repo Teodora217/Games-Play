@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Routes, Route, useNavigate } from "react-router-dom"
 import * as authService from './services/authService'
-import AuthContext from "./contexts/authContext"
+import {AuthProvider} from "./contexts/authContext"
 import Path from "../src/paths"
 import Header from "./components/Header"
 import Home from "./components/Home"
@@ -49,7 +49,7 @@ const [auth, setAuth] = useState(() => {
   }
 
   return (
-    <AuthContext.Provider value={values}>
+    <AuthProvider value={values}>
     <div id="box">
     <Header/>
     <Routes>
@@ -63,7 +63,7 @@ const [auth, setAuth] = useState(() => {
     </Routes>
     <Home/>
     </div>
-    </AuthContext.Provider>
+    </AuthProvider>
   )
 }
 
